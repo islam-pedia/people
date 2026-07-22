@@ -36,6 +36,37 @@ person and their story.
 - SQLite is a structured build-time knowledge source, not a production runtime
   dependency for every request.
 
+## Image Production
+
+- Create all editorial and atmospheric raster imagery with the built-in
+  `imagegen` capability. Do not use stock photography, downloaded AI artwork,
+  generic placeholders, or hand-authored substitutes for final story imagery.
+- Treat `/Users/farhantallei/vibe-code/sirah-nabawiyah-2` as the canonical visual
+  reference library. Before generating imagery, inspect its `DESIGN.md` and the
+  representative plates in `demo/assets/prolog2/`, especially
+  `02-malam-panjang.png`.
+- Inherit the reference library's shared material language: cinematic ink-wash
+  on warm aged parchment, charcoal and sepia pigments, monumental environments,
+  deliberate negative space, restrained points of light, and painted edges that
+  dissolve into the page. Use the references as a style authority, never as a
+  composition to copy.
+- A figure's local `DESIGN.md` may vary subject matter, palette temperature,
+  light, composition, and narrative symbolism, but it must retain that shared
+  image-production language unless the user explicitly revises this rule.
+- Do not bake titles, Arabic, Qur'anic text, calligraphy, labels, or UI into
+  generated images. Render all language as reviewed HTML.
+- Never depict Nabi Muhammad ﷺ. Prophets and revered figures must not appear as
+  portraits, faces, bodies, identifiable silhouettes, or staged absences. If a
+  scene needs human scale, use distant anonymous figures only where the local
+  reverence rules permit them.
+- Generated imagery is editorial atmosphere, not historical evidence. Caption it
+  accordingly, and do not imply that clothing, architecture, geography, routes,
+  objects, or events are verified reconstructions without a source.
+- Save accepted outputs inside the relevant figure's `assets/` directory with
+  descriptive filenames. Keep the final prompt and reference paths available in
+  the figure's local design documentation so the visual language can be
+  reproduced deliberately.
+
 ## Knowledge Model
 
 Keep reusable facts in SQLite and keep visual storytelling in files. A typical

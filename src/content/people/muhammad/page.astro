@@ -1,0 +1,262 @@
+---
+import "@fontsource-variable/familjen-grotesk"
+import "@fontsource-variable/source-serif-4"
+import "@fontsource-variable/noto-kufi-arabic"
+
+import { Image } from "astro:assets"
+
+import heroImage from "./assets/hijaz-dawn-ink.png"
+import journeyImage from "./assets/hijrah-route-ink.png"
+import { chapters, references, relations } from "./data"
+
+import "./theme.css"
+
+// biome-ignore lint/correctness/noUnusedVariables: Astro consumes this value in the template.
+const lineage = ["Muhammad", "Abdullah", "Abdul Muthalib", "Hasyim"]
+---
+
+<!--
+THESIS: A single trace turns biography into a sourceable journey; it refuses the interchangeable profile hero.
+OWN-WORLD: Cinematic ink-wash landscapes on aged parchment, monumental scale, charcoal night fields, Source Serif monumentality, and precise Familjen labels.
+STORY: The reader encounters identity, lineage, revelation, Hijrah, Madinah, relationships, and the sources beneath them.
+FIRST VIEWPORT: A dawn ridge fills the screen; the name MUHAMMAD anchors the lower field while Arabic and factual context hold the left edge.
+FORM: Read-led scrolling editorial; The Living Isnad translated as A Line Across the Mountain.
+-->
+
+<a class="skip-link" href="#main-content">Lewati ke isi utama</a>
+
+<main id="main-content" class="person-page">
+  <header class="site-header" aria-label="Navigasi utama">
+    <a class="brand" href="/" aria-label="People oleh Islampedia">
+      <span class="brand__name">People</span>
+      <span class="brand__by">by Islampedia</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi halaman">
+      <a href="#kisah">Kisah</a>
+      <a href="#relasi">Relasi</a>
+      <a href="#sumber">Sumber</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-hero aria-labelledby="person-name">
+    <div class="hero__media" aria-hidden="true">
+      <Image
+        data-hero-image
+        src={heroImage}
+        widths={[640, 960, 1280, 1600, heroImage.width]}
+        sizes="100vw"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__context">
+      <span class="hero__seal" aria-hidden="true">ﷺ</span>
+      <p>Nabi dan Rasul terakhir</p>
+      <p>Tahun Gajah — 11 H</p>
+    </div>
+
+    <div class="hero__title-wrap">
+      <p class="hero__arabic" lang="ar" dir="rtl">مُحَمَّد ﷺ</p>
+      <h1 id="person-name" class="hero__title">Muhammad</h1>
+      <p class="hero__honorific">shallallahu ‘alaihi wa sallam</p>
+    </div>
+
+    <p class="hero__caption">Visual atmosferik · bukan rekonstruksi sejarah</p>
+    <a class="scroll-cue" href="#pengantar">
+      <span>Mulai membaca</span>
+      <span class="scroll-cue__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <section id="pengantar" class="prologue">
+    <div class="prologue__reference" data-reveal>
+      <span>Al-Qur’an · 21:107</span>
+      <p>Diutus sebagai rahmat bagi seluruh alam.</p>
+    </div>
+    <div class="prologue__body" data-reveal>
+      <p class="lead">
+        Mengenal Nabi Muhammad ﷺ berarti mengikuti sebuah kehidupan yang setiap
+        bagiannya terhubung: keluarga, wahyu, sahabat, perjalanan, dan umat yang
+        membawa ajarannya lintas generasi.
+      </p>
+      <p>
+        Halaman ini adalah prototipe editorial. Ia memperlihatkan bagaimana kisah
+        dan relasi dapat dibaca sebagai satu perjalanan; naskah dan daftar sumber
+        masih memerlukan peninjauan ilmiah sebelum publikasi.
+      </p>
+    </div>
+  </section>
+
+  <article id="kisah" class="story" data-story>
+    <div class="story__trace" aria-hidden="true">
+      <span class="story__trace-base"></span>
+      <span class="story__trace-fill" data-trace-fill></span>
+    </div>
+
+    <section class="lineage passage passage--light" aria-labelledby="makkah-title">
+      <div class="passage__marker">
+        <span>Makkah</span>
+        <span>Tahun Gajah</span>
+      </div>
+      <div class="lineage__field" aria-hidden="true">Quraisy</div>
+      <div class="passage__content" data-reveal>
+        <p class="passage__place">{chapters[0].place}</p>
+        <h2 id="makkah-title">{chapters[0].title}</h2>
+        {chapters[0].body.map((paragraph) => <p>{paragraph}</p>)}
+
+        <ol class="lineage__chain" aria-label="Ringkasan nasab">
+          {lineage.map((name, index) => (
+            <li>
+              <span>{name}</span>
+              {index < lineage.length - 1 && <span aria-hidden="true">bin</span>}
+            </li>
+          ))}
+        </ol>
+        <p class="source-note">{chapters[0].source}</p>
+      </div>
+    </section>
+
+    <section class="revelation passage passage--night" aria-labelledby="wahyu-title">
+      <div class="passage__marker passage__marker--dark">
+        <span>Jabal Nur</span>
+        <span>610 M</span>
+      </div>
+      <div class="revelation__word" lang="ar" dir="rtl" aria-hidden="true">اقْرَأْ</div>
+      <div class="revelation__quote" data-reveal>
+        <p lang="ar" dir="rtl">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</p>
+        <span>“Bacalah dengan nama Tuhanmu yang menciptakan.”</span>
+        <cite>QS al-‘Alaq · 96:1</cite>
+      </div>
+      <div class="passage__content passage__content--right" data-reveal>
+        <p class="passage__place">{chapters[1].place}</p>
+        <h2 id="wahyu-title">{chapters[1].title}</h2>
+        {chapters[1].body.map((paragraph) => <p>{paragraph}</p>)}
+        <p class="source-note source-note--dark">{chapters[1].source}</p>
+      </div>
+    </section>
+
+    <section class="journey" data-journey aria-labelledby="hijrah-title">
+      <div class="journey__media">
+        <Image
+          data-journey-image
+          src={journeyImage}
+          widths={[640, 960, 1280, 1600, journeyImage.width]}
+          sizes="100vw"
+          alt="Lanskap pegunungan kering dengan sebuah jalur menuju dataran terbuka"
+          loading="lazy"
+        />
+        <p>Visual atmosferik · bukan rekonstruksi rute Hijrah</p>
+      </div>
+      <div class="journey__content">
+        <div class="journey__index" aria-hidden="true">
+          <span>Makkah</span>
+          <span>Madinah</span>
+        </div>
+        <div class="journey__text" data-reveal>
+          <p class="passage__place">{chapters[2].period}</p>
+          <h2 id="hijrah-title">{chapters[2].title}</h2>
+          {chapters[2].body.map((paragraph) => <p>{paragraph}</p>)}
+          <blockquote>
+            “Janganlah engkau bersedih, sesungguhnya Allah bersama kita.”
+            <cite>QS al-Tawbah · 9:40</cite>
+          </blockquote>
+          <p class="source-note source-note--dark">{chapters[2].source}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="madinah passage passage--umber" aria-labelledby="madinah-title">
+      <div class="passage__marker passage__marker--dark">
+        <span>Madinah</span>
+        <span>1–11 H</span>
+      </div>
+      <div class="madinah__name" aria-hidden="true">Madinah</div>
+      <div class="passage__content" data-reveal>
+        <p class="passage__place">{chapters[3].period}</p>
+        <h2 id="madinah-title">{chapters[3].title}</h2>
+        {chapters[3].body.map((paragraph) => <p>{paragraph}</p>)}
+        <p class="source-note source-note--dark">{chapters[3].source}</p>
+      </div>
+    </section>
+  </article>
+
+  <section id="relasi" class="relations" aria-labelledby="relations-title">
+    <header class="relations__intro" data-reveal>
+      <p class="section-label">Jejak hubungan</p>
+      <h2 id="relations-title">Satu kehidupan,<br />banyak mata rantai.</h2>
+      <p>
+        Relasi tidak berhenti sebagai daftar. Setiap nama membuka konteks baru:
+        keluarga, pengasuhan, persahabatan, ilmu, dan generasi setelahnya.
+      </p>
+    </header>
+
+    <div class="relations__map">
+      <div class="relations__origin" aria-label="Pusat relasi: Nabi Muhammad">
+        <span lang="ar" dir="rtl">محمد ﷺ</span>
+        <strong>Muhammad</strong>
+      </div>
+      <div class="relations__list">
+        {relations.map((relation) => (
+          <article class="relation" data-relation>
+            <span class="relation__node" aria-hidden="true"></span>
+            <div class="relation__role">{relation.relation}</div>
+            <div class="relation__identity">
+              <h3>{relation.name}</h3>
+              {relation.arabic && <span lang="ar" dir="rtl">{relation.arabic}</span>}
+            </div>
+            <p>{relation.context}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="legacy" aria-labelledby="legacy-title">
+    <div class="legacy__field" aria-hidden="true">Teladan</div>
+    <div class="legacy__content" data-reveal>
+      <p class="section-label">Al-Qur’an · 33:21</p>
+      <h2 id="legacy-title">Sebuah kehidupan yang terus dipelajari.</h2>
+      <p>
+        Bagi orang yang mengharap Allah dan hari akhir, Rasulullah ﷺ adalah
+        teladan yang baik. Karena itu, ketelitian sumber bukan bagian tambahan
+        dari halaman ini—ia adalah fondasinya.
+      </p>
+    </div>
+  </section>
+
+  <section id="sumber" class="sources" aria-labelledby="sources-title">
+    <div class="sources__heading" data-reveal>
+      <p class="section-label">Rujukan awal</p>
+      <h2 id="sources-title">Setiap jalur harus dapat ditelusuri kembali.</h2>
+      <p>
+        Daftar berikut menunjukkan fondasi sumber prototipe. Takhrij, penilaian
+        riwayat, edisi kitab, dan format sitasi final masih dalam peninjauan.
+      </p>
+    </div>
+    <ol class="sources__list">
+      {references.map((reference, index) => (
+        <li data-reveal>
+          <span class="sources__number">{String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <h3>{reference.title}</h3>
+            <p>{reference.detail}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <footer class="page-footer">
+    <a class="brand brand--footer" href="/">
+      <span class="brand__name">People</span>
+      <span class="brand__by">by Islampedia</span>
+    </a>
+    <p>Prototipe editorial · konten dalam peninjauan</p>
+    <a href="#main-content">Kembali ke atas ↑</a>
+  </footer>
+</main>
+
+<script src="./animation.ts"></script>

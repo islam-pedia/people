@@ -1,9 +1,77 @@
 ---
 name: People by Islampedia
 description: A source-led, full-art editorial world for encountering Islamic lives and their relationships.
+colors:
+  institutional-ink: "#17162b"
+  reading-ground: "#f1ede2"
+  quiet-structure: "#d8d1be"
+  relation-trace: "#87a69b"
+  evidence-mark: "#d6a75a"
+  body-ink: "#17171d"
+typography:
+  display:
+    fontFamily: "Familjen Grotesk Variable, Arial Narrow, sans-serif"
+    fontSize: "clamp(3.75rem, 10vw, 6rem)"
+    fontWeight: 650
+    lineHeight: 0.88
+    letterSpacing: "-0.035em"
+  headline:
+    fontFamily: "Familjen Grotesk Variable, Arial Narrow, sans-serif"
+    fontSize: "clamp(2.8rem, 6.5vw, 5.5rem)"
+    fontWeight: 590
+    lineHeight: 0.95
+    letterSpacing: "-0.038em"
+  title:
+    fontFamily: "Familjen Grotesk Variable, Arial Narrow, sans-serif"
+    fontSize: "clamp(2rem, 4.2vw, 3.6rem)"
+    fontWeight: 540
+    lineHeight: 1.02
+    letterSpacing: "-0.035em"
+  lead:
+    fontFamily: "Familjen Grotesk Variable, Arial Narrow, sans-serif"
+    fontSize: "clamp(1.35rem, 2.5vw, 2rem)"
+    fontWeight: 560
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
+  body:
+    fontFamily: "Source Serif 4 Variable, Georgia, serif"
+    fontSize: "clamp(1.08rem, 1.6vw, 1.28rem)"
+    fontWeight: 410
+    lineHeight: 1.7
+  body-small:
+    fontFamily: "Source Serif 4 Variable, Georgia, serif"
+    fontSize: "0.92rem"
+    fontWeight: 410
+    lineHeight: 1.55
+  label:
+    fontFamily: "Familjen Grotesk Variable, Arial, sans-serif"
+    fontSize: "0.72rem"
+    fontWeight: 620
+    lineHeight: 1.2
+    letterSpacing: "0.08em"
+  micro:
+    fontFamily: "Familjen Grotesk Variable, Arial, sans-serif"
+    fontSize: "0.68rem"
+    fontWeight: 620
+    lineHeight: 1.2
+    letterSpacing: "0.04em"
+  arabic:
+    fontFamily: "Noto Kufi Arabic Variable, serif"
+    fontWeight: 500
+    lineHeight: 1.6
+  field-art:
+    fontFamily: "Familjen Grotesk Variable, Arial Narrow, sans-serif"
+    fontSize: "clamp(8rem, 28vw, 28rem)"
+    fontWeight: 720
+    lineHeight: 0.8
+    letterSpacing: "-0.06em"
+rounded:
+  editorial-edge: "2px"
+spacing:
+  trace-unit: "8px"
+  page-gutter: "clamp(1.25rem, 4vw, 4.5rem)"
+  passage: "clamp(5rem, 12vw, 11rem)"
 ---
-
-<!-- SEED: established with the user before implementation; re-run $impeccable document once there's code to capture the actual tokens and components. -->
 
 # Design System: People by Islampedia
 
@@ -37,12 +105,22 @@ soundless rhythm, and scrolling storytelling carry the narrative. The interface
 recedes whenever it competes with the content. Premium means authored,
 controlled, and exact—not glossy chrome or a high density of effects.
 
+All story imagery shares one material lineage: cinematic ink-wash on warm aged
+parchment, generated through `imagegen`. The canonical visual authority is
+`/Users/farhantallei/vibe-code/sirah-nabawiyah-2`, with
+`demo/assets/prolog2/02-malam-panjang.png` as the primary reference plate and the
+remaining `demo/assets/prolog2/` plates as the supporting reference set. Local
+art direction changes the world being painted; it does not abandon this shared
+material language.
+
 **Key Characteristics:**
 
 - Source-led editorial storytelling rather than database presentation.
 - Monumental typography paired with a highly readable long-form text system.
 - Full-bleed visual fields and decisive images, not galleries of interchangeable
   thumbnails.
+- Imagegen-authored ink-wash plates with parchment negative space and edges that
+  dissolve into the reading surface.
 - Relationships revealed contextually through the reading journey.
 - One stable institutional grammar supporting many figure-specific art worlds.
 - Motion with weight, restraint, and a complete reduced-motion path.
@@ -62,8 +140,9 @@ expression; the root wins on meaning, trust, and usability.
 ## Colors
 
 The global system uses a restrained institutional base with one page-owned color
-field. The exact palette and color values are **to be resolved during the first
-implementation**.
+field. The root tokens now capture the shared ink, reading ground, structural,
+relationship, and evidence roles proven by the first implementation. A local
+design may replace the story field while preserving these semantic roles.
 
 ### Primary
 
@@ -97,9 +176,11 @@ states may not change meaning from page to page.
 
 ## Typography
 
-The type system is the primary visual architecture. Exact families and metrics
-are **to be resolved during implementation**, after testing Bahasa Indonesia,
-Arabic, transliteration, honorifics, long-form reading, and mobile rendering.
+The type system is the primary visual architecture. Familjen Grotesk is the
+institutional display and label voice; Source Serif 4 is the default reading
+voice; Noto Kufi Arabic provides the initial Arabic baseline. A local design may
+introduce another compatible display face, but it must preserve the hierarchy
+and multilingual requirements established here.
 
 **Display Character:** monumental, dignified, and capable of carrying a name or
 turning point at architectural scale. A figure page may introduce a compatible
@@ -180,6 +261,42 @@ compete with a collection of unrelated effects.
 **The Still Page Test.** If a screenshot without motion loses the hierarchy or
 meaning, the composition is unfinished.
 
+### Image Language and Production
+
+Editorial and atmospheric raster imagery is generated with `imagegen`; stock
+photography, generic placeholders, and downloaded AI art are not part of the
+production language. Every generation begins by inspecting the canonical
+reference library and translating its principles into an original composition:
+
+- warm aged parchment as the material ground;
+- charcoal, sepia, soot, and restrained mineral or ember accents;
+- cinematic ink-wash crossed with concept-art scale;
+- monumental landscapes or architecture with human presence kept distant,
+  anonymous, and subordinate where reverence rules permit it;
+- one deliberate field of clean parchment for typography or visual rest;
+- irregular wash, bloom, splatter, dry-brush texture, and image edges that fade
+  into the page rather than forming a framed rectangle; and
+- scarce, meaningful light rather than uniform digital glow.
+
+The references define material and emotional register, not a template. Do not
+copy their exact mountains, horizon, figure placement, or left/right balance.
+Each figure's local `DESIGN.md` must define the subject, symbolic geography,
+palette temperature, direction of light, negative-space placement, aspect ratio,
+and reverence constraints for its own plates.
+
+No generated image may contain baked text, Arabic, Qur'anic verses, calligraphy,
+labels, UI, logos, watermarks, visible faces, portraits of prophets, or imagery
+that could be mistaken for documentary evidence. Accepted images must be saved
+inside the figure's `assets/` directory and labeled in the page as editorial or
+atmospheric art when a reader could otherwise infer historical reconstruction.
+
+**The Parchment Seam Rule.** The image's clean parchment field and the page
+surface must meet without an obvious frame. Match the page tone to the accepted
+plate or blend the plate into the local surface with a controlled mask.
+
+**The Original Plate Rule.** Use the visual reference to inherit technique,
+scale, and restraint; never use it as a layout to trace or a scene to duplicate.
+
 ## Shapes
 
 The base system favors editorial edges, image crops, rules, source marks, and
@@ -206,6 +323,10 @@ layer. Do not draw boxes merely because the page needs visual variety.
   reusable hero component with swapped content.
 - **Do** use large, carefully authored imagery that establishes place, material,
   atmosphere, or historical context.
+- **Do** generate final story imagery with `imagegen` after inspecting the
+  canonical `sirah-nabawiyah-2` reference plates.
+- **Do** record the accepted imagegen prompt and reference paths in the local
+  figure design documentation.
 - **Do** make citations, certainty, and differing reports easy to reach without
   breaking the reading experience.
 - **Do** keep the prose readable and semantically complete without JavaScript,
@@ -224,6 +345,10 @@ layer. Do not draw boxes merely because the page needs visual variety.
   gradients, soft shadows, or excessive polish effects.
 - **Don't** use generic mosque silhouettes, random geometric patterns,
   pseudo-Arabic lettering, or manuscript texture as shorthand for Islam.
+- **Don't** use stock photography, placeholder photos, downloaded AI artwork, or
+  baked text in final editorial imagery.
+- **Don't** copy the composition of a reference plate; inherit its material
+  language and make an original scene for the figure's narrative.
 - **Don't** turn relationships into a graph canvas before the reading experience
   proves that interaction necessary.
 - **Don't** invent imagery, quotations, sanad, events, or historical artifacts

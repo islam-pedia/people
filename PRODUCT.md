@@ -90,6 +90,14 @@ besar, scrolling storytelling, serta animasi yang halus dan mantap. Kualitas
 tersebut harus memperkuat isi dan rasa hormat kepada subjek, bukan menjadikan
 halaman sebagai pertunjukan efek.
 
+Seluruh gambar editorial dan atmosferik diproduksi melalui `imagegen`. Bahasa
+material bersama People mengacu pada proyek lokal
+`/Users/farhantallei/vibe-code/sirah-nabawiyah-2`: ink-wash sinematik di atas
+parchment hangat, pigmen arang dan sepia, lingkungan monumental, ruang kosong
+yang disengaja, cahaya yang hemat, serta tepian lukisan yang larut ke halaman.
+Rujukan tersebut adalah otoritas gaya, bukan komposisi yang disalin dan bukan
+bukti sejarah.
+
 Setiap tokoh akan memiliki design direction dan `DESIGN.md` lokal di folder
 kontennya. Dokumen tersebut mewarisi identitas induk People, kemudian menetapkan
 dunia visual yang khusus untuk kehidupan dan narasi tokoh tersebut.
@@ -99,10 +107,17 @@ kumpulan komponen generik.
 
 ## Evidence on Hand
 
-Belum ada korpus tokoh, naskah editorial final, citra resmi, identitas visual
-final, atau klaim eksternal yang dapat dipakai sebagai bukti. Future work tidak
-boleh mengarang kutipan, sanad, penilaian hadis, peristiwa, hubungan, atau
-atribusi sumber untuk mengisi kekosongan desain.
+Belum ada korpus tokoh, naskah editorial final, citra dokumenter resmi, atau
+klaim eksternal yang dapat dipakai sebagai bukti. Future work tidak boleh
+mengarang kutipan, sanad, penilaian hadis, peristiwa, hubungan, atau atribusi
+sumber untuk mengisi kekosongan desain.
+
+Bahasa visual awal sudah memiliki bukti arah yang disetujui pada proyek lokal
+`/Users/farhantallei/vibe-code/sirah-nabawiyah-2`, terutama `DESIGN.md` dan plate
+di `demo/assets/prolog2/`. Aset tersebut hanya menjadi referensi art direction.
+Gambar baru tetap harus dibuat melalui `imagegen`, berupa komposisi orisinal,
+disimpan bersama halaman tokoh, dan dilabeli sebagai visual editorial atau
+atmosferik—bukan rekonstruksi sejarah.
 
 Metode editorial berlandaskan manhaj salafiyyun: merujuk Al-Qur'an dan Sunnah
 yang sahih sesuai pemahaman salafus shalih, serta mengacu pada penjelasan ulama

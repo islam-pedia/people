@@ -35,8 +35,16 @@ related_targets: []
 knowledge: relationship paths, chronology, image planes, and source marks enter
 the story only when their meaning becomes relevant. A monumental typographic
 opening leads into a scrolling sequence of life phases, relational turns, and
-evidentiary margins. Large non-figurative imagery establishes place and material
+evidentiary margins. Original `imagegen` plates use the canonical
+`sirah-nabawiyah-2` language—cinematic ink-wash, aged parchment, monumental
+terrain, sparse light, and dissolving edges—to establish place and material
 without pretending to be historical proof.
+
+The surrounding interface uses that same material family: parchment is the
+reading canvas, charcoal and deep umber carry the dark movements, sepia and
+olive-brown encode evidence and relation, and firelight is reserved for
+revelation or arrival. Source Serif 4 owns narrative display; Familjen Grotesk
+remains the institutional voice for navigation, dates, relations, and sources.
 
 The memorable moment is a single continuous relationship trace that begins near
 the opening identity, travels through the narrative, and resolves as a clear
@@ -45,9 +53,8 @@ must feel like discovery within an editorial story, not a graph interface.
 
 ## Unresolved decisions
 
-- The future `src/content/people/muhammad/DESIGN.md` that will commit this
-  figure's complete local art direction while inheriting the root design system.
 - Final narrative outline, verified copy, and source corpus.
-- Image policy beyond the confirmed prohibition on depicting Nabi Muhammad ﷺ.
-- Exact palette, typefaces, metrics, motion timing, and relationship notation.
-- Whether the first route will be the site index or a dedicated person route.
+- Final imagegen prompts and accepted plate variants; the material language and
+  prohibition on depicting Nabi Muhammad ﷺ are already fixed.
+- Dedicated production route; the current prototype is intentionally mounted at
+  the site index for immediate review.

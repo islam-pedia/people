@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-22T19:19:09Z",
+  "title": "Design System: People by Islampedia",
+  "extensions": {
+    "colorMeta": {
+      "institutional-ink": {
+        "role": "primary",
+        "displayName": "Institutional Ink",
+        "canonical": "#17162b",
+        "tonalRamp": [
+          "#090910",
+          "#17162b",
+          "#292744",
+          "#403e5e",
+          "#66647d",
+          "#9694a7",
+          "#cbc9d2",
+          "#f2f1f4"
+        ]
+      },
+      "reading-ground": {
+        "role": "neutral",
+        "displayName": "Reading Ground",
+        "canonical": "#f1ede2",
+        "tonalRamp": [
+          "#211f1a",
+          "#39362f",
+          "#575349",
+          "#777268",
+          "#9b9589",
+          "#beb8aa",
+          "#ddd7ca",
+          "#f6f2e8"
+        ]
+      },
+      "quiet-structure": {
+        "role": "neutral",
+        "displayName": "Quiet Structure",
+        "canonical": "#d8d1be",
+        "tonalRamp": [
+          "#211f1a",
+          "#3b382f",
+          "#5b574c",
+          "#7e786a",
+          "#a19b89",
+          "#c2bba6",
+          "#ddd6c3",
+          "#f4efe4"
+        ]
+      },
+      "relation-trace": {
+        "role": "secondary",
+        "displayName": "Relation Trace",
+        "canonical": "#87a69b",
+        "tonalRamp": [
+          "#11231e",
+          "#203c34",
+          "#36594f",
+          "#50776c",
+          "#6f9588",
+          "#95b5aa",
+          "#bfd3cc",
+          "#e7f0ed"
+        ]
+      },
+      "evidence-mark": {
+        "role": "tertiary",
+        "displayName": "Evidence Mark",
+        "canonical": "#d6a75a",
+        "tonalRamp": [
+          "#2a1b08",
+          "#4a3010",
+          "#6f491a",
+          "#97672a",
+          "#bc8740",
+          "#dbaa65",
+          "#ebca9d",
+          "#f8ead4"
+        ]
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "#17171d",
+        "tonalRamp": [
+          "#09090b",
+          "#17171d",
+          "#2c2c33",
+          "#46464e",
+          "#696971",
+          "#96969d",
+          "#c9c9cd",
+          "#f1f1f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Monumental Display",
+        "purpose": "Names and major narrative thresholds."
+      },
+      "headline": {
+        "displayName": "Chapter Headline",
+        "purpose": "Major movements in a long editorial narrative."
+      },
+      "title": {
+        "displayName": "Passage Title",
+        "purpose": "Local narrative and relationship group titles."
+      },
+      "lead": {
+        "displayName": "Editorial Lead",
+        "purpose": "High-emphasis framing copy before long-form reading."
+      },
+      "body": {
+        "displayName": "Editorial Reading",
+        "purpose": "Long-form Bahasa Indonesia copy."
+      },
+      "body-small": {
+        "displayName": "Compact Reading",
+        "purpose": "Relationship and source context."
+      },
+      "label": {
+        "displayName": "Evidence Label",
+        "purpose": "Time, place, relation, source, and certainty."
+      },
+      "micro": {
+        "displayName": "Micro Label",
+        "purpose": "Captions and compact institutional signatures."
+      },
+      "arabic": {
+        "displayName": "Arabic Baseline",
+        "purpose": "Correctly shaped Arabic names and short excerpts."
+      },
+      "field-art": {
+        "displayName": "Field Typography",
+        "purpose": "Decorative aria-hidden words used as page-scale spatial material."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "settle",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Reveals settle into place with physical confidence."
+      },
+      {
+        "name": "trace",
+        "value": "linear",
+        "purpose": "Scroll-linked relation and chronology drawing only."
+      }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "760px" },
+      { "name": "editorial-stack", "value": "980px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "People Brand",
+      "kind": "nav",
+      "description": "Compact institutional signature used over art and quiet surfaces.",
+      "html": "<a class=\"ds-brand\" href=\"#\"><strong>People</strong><span>by Islampedia</span></a>",
+      "css": ".ds-brand { display:inline-flex; align-items:baseline; gap:.55rem; color:#17162b; font-family:'Familjen Grotesk Variable',Arial,sans-serif; text-decoration:none; } .ds-brand strong { font-size:1.12rem; letter-spacing:-.03em; } .ds-brand span { font-size:.68rem; font-weight:560; letter-spacing:.04em; opacity:.58; } .ds-brand:focus-visible { outline:2px solid #d6a75a; outline-offset:5px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "description": "A calm text link whose rule appears only as interaction feedback.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Sumber</a>",
+      "css": ".ds-nav-link { position:relative; padding:.2rem 0 .45rem; color:#17162b; font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:.76rem; font-weight:580; letter-spacing:.04em; text-decoration:none; } .ds-nav-link::after { position:absolute; right:0; bottom:0; left:0; height:1px; background:currentColor; content:''; transform:scaleX(0); transform-origin:right; transition:transform 280ms cubic-bezier(.16,1,.3,1); } .ds-nav-link:hover::after,.ds-nav-link:focus-visible::after { transform:scaleX(1); transform-origin:left; } .ds-nav-link:focus-visible { outline:2px solid #d6a75a; outline-offset:5px; }"
+    },
+    {
+      "name": "Source Note",
+      "kind": "custom",
+      "description": "A factual source marker attached to the passage it supports.",
+      "html": "<p class=\"ds-source-note\">QS al-‘Alaq 96:1–5 · Sahih al-Bukhari, Bad’ al-Wahy</p>",
+      "css": ".ds-source-note { max-width:58ch; margin:3.25rem 0 0; padding-top:1rem; border-top:1px solid rgba(23,23,29,.16); color:#5f5c5c; font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:.72rem; line-height:1.5; }"
+    },
+    {
+      "name": "Relation Row",
+      "kind": "custom",
+      "description": "A textual relationship edge with role, identity, and context.",
+      "html": "<article class=\"ds-relation\"><span>SAHABAT</span><div><strong>Abu Bakr al-Shiddiq</strong><p>Menemani hijrah dan menjadi khalifah pertama setelah beliau.</p></div></article>",
+      "css": ".ds-relation { display:grid; grid-template-columns:7rem 1fr; gap:1.5rem; padding:2rem 0; border-bottom:1px solid rgba(23,23,29,.16); color:#17171d; } .ds-relation>span { padding-top:.3rem; color:#5d6f9c; font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:.68rem; font-weight:650; letter-spacing:.07em; } .ds-relation strong { font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:1.15rem; letter-spacing:-.02em; } .ds-relation p { margin:.5rem 0 0; color:#5f5c5c; font-family:'Source Serif 4 Variable',Georgia,serif; line-height:1.55; }"
+    },
+    {
+      "name": "Reference Row",
+      "kind": "custom",
+      "description": "A numbered source entry whose sequence carries citation order.",
+      "html": "<div class=\"ds-reference\"><span>01</span><div><strong>Al-Qur’an</strong><p>QS 21:107 · QS 33:21 · QS 33:40</p></div></div>",
+      "css": ".ds-reference { display:grid; grid-template-columns:3rem 1fr; gap:1.5rem; padding:1.75rem 0; border-top:1px solid rgba(241,237,226,.2); background:#17162b; color:#f1ede2; } .ds-reference>span { color:#d6a75a; font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:.68rem; font-weight:650; } .ds-reference strong { font-family:'Familjen Grotesk Variable',Arial,sans-serif; font-size:1.15rem; } .ds-reference p { margin:.55rem 0 0; color:rgba(241,237,226,.6); font-family:'Source Serif 4 Variable',Georgia,serif; font-size:.9rem; line-height:1.55; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Isnad",
+    "overview": "People treats knowledge as a living chain: a claim leads to a source, a life leads to other lives, and every relationship has a visible path. That chain becomes editorial choreography—lines that guide the eye, margins that hold evidence, images that establish place and period, and transitions that reveal connections at the moment they become meaningful. The institutional layer remains stable while the story layer is art-directed per figure.",
+    "keyCharacteristics": [
+      "Source-led editorial storytelling rather than database presentation.",
+      "Monumental typography paired with a highly readable long-form text system.",
+      "Full-bleed visual fields and decisive images, not galleries of interchangeable thumbnails.",
+      "Imagegen-authored cinematic ink-wash plates on warm aged parchment, with deliberate negative space and dissolving edges.",
+      "Relationships revealed contextually through the reading journey.",
+      "One stable institutional grammar supporting many figure-specific art worlds.",
+      "Motion with weight, restraint, and a complete reduced-motion path."
+    ],
+    "rules": [
+      {
+        "name": "The Content Has Gravity Rule",
+        "body": "Art direction must increase attention to the subject, the evidence, or the relationship being explained. If an effect pulls attention toward itself, remove or subordinate it.",
+        "section": "overview"
+      },
+      {
+        "name": "The One Life, One World Rule",
+        "body": "Each major figure may own a distinct visual world, but not a different usability model. Reading, navigation, citations, and relationship semantics remain learnable across the site.",
+        "section": "overview"
+      },
+      {
+        "name": "The Field, Not Confetti Rule",
+        "body": "Color belongs to meaningful regions, images, and narrative transitions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Protected Spine Rule",
+        "body": "Art may cross the grid; essential prose, sources, and controls may not become unstable, obscured, or dependent on pointer hover.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Orchestrated Gesture Rule",
+        "body": "Each page earns one dominant motion idea derived from its story.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Parchment Seam Rule",
+        "body": "The image's clean parchment field and the page surface must meet without an obvious frame.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Original Plate Rule",
+        "body": "Use the canonical sirah-nabawiyah-2 references to inherit technique, scale, and restraint; never trace their layout or duplicate their scene.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do begin each figure with a visual thesis specific to that life, not a reusable hero component with swapped content.",
+      "Do use large, carefully authored imagery that establishes place, material, atmosphere, or historical context.",
+      "Do generate final editorial imagery with imagegen after inspecting the canonical sirah-nabawiyah-2 reference plates.",
+      "Do record accepted imagegen prompts and reference paths in the local figure design documentation.",
+      "Do make citations, certainty, and differing reports easy to reach without breaking the reading experience."
+    ],
+    "donts": [
+      "Don't imitate Wikipedia, a dashboard, an admin interface, a SaaS landing page, or a shadcn component showcase.",
+      "Don't turn relationships into a graph canvas before the reading experience proves that interaction necessary.",
+      "Don't use stock photography, placeholder photos, downloaded AI artwork, or baked text in final editorial imagery.",
+      "Don't copy the composition of a canonical reference plate.",
+      "Don't invent imagery, quotations, sanad, events, or historical artifacts that a reader could mistake for evidence."
+    ]
+  }
+}
